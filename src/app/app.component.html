@@ -1,13 +1,21 @@
 <div class="toolbar d-flex align-items-center">
-  <img width="40" src="assets/universal.svg" alt="Angular Universal Logo">
+  <img width="40" src="assets/universal.svg" alt="Angular Universal Logo" />
   <span>Portifólio</span>
-  <a class="ms-auto p-2" href="https://github.com/{{username}}" title="GitHub" target="_blank" rel="noopener">
+  <a
+    class="ms-auto p-2"
+    href="https://github.com/{{ username }}"
+    title="GitHub"
+    target="_blank"
+    rel="noopener"
+  >
     <i class="bi-github"></i>
   </a>
 </div>
 <div class="content d-flex flex-column">
   <div class="row">
-    <div class="col-sm-3">Info</div>
+    <div class="col-sm-3">
+      <app-personal-info></app-personal-info>
+    </div>
     <div class="col-sm-9">
       <div class="row">
         <div class="col-12 col-sm-12">Repositories</div>
@@ -16,6 +24,6 @@
         <div class="col-12 col-sm-12">Organizations</div>
       </div>
     </div>
-  </div>  
+  </div>
 </div>
 <!-- <router-outlet></router-outlet> -->
