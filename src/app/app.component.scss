@@ -1,2 +1,42 @@
-@import url("~bootstrap/scss/bootstrap");
-@import url("~bootstrap-icons/font/bootstrap-icons");
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
+.toolbar {
+    border: 1px solid;
+    margin: 0;
+  height: 60px;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar i {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 16px;
+}
+
+.toolbar a {
+  margin-bottom: 5px;
+}
+
+.toolbar i:hover {
+  opacity: 0.8;
+}
+
+.content {
+  margin: 52px auto 32px;
+  padding: 0 16px;
+}
