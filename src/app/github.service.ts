@@ -8,11 +8,14 @@ import { User } from './shared/model/user';
   providedIn: 'root',
 })
 export class GithubService {
-  constructor(private http: HttpClient) {}
+
+  private userUrl: string = '';
+
+  constructor(private http: HttpClient) {
+    this.userUrl = `${environment.apiUrl}/users/${environment.username}`;
+  }
 
   public getUser(): Observable<User> {
-    return this.http.get<User>(
-      `${environment.apiUrl}/users/${environment.username}`
-    );
+    return this.http.get<User>(this.userUrl);
   }
 }
