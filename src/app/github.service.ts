@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Repository } from './shared/model/repository';
 import { User } from './shared/model/user';
 
 @Injectable({
@@ -17,5 +18,9 @@ export class GithubService {
 
   public getUser(): Observable<User> {
     return this.http.get<User>(this.userUrl);
+  }
+
+  public getRepos(): Observable<Repository[]> {
+    return this.http.get<Repository[]>(`${this.userUrl}/repos`);
   }
 }
